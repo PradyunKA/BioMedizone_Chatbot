@@ -18,7 +18,6 @@ darkModeToggle.addEventListener('change', () => {
     }
 });
 
-// Chat form submission (placeholder functionality)
 chatForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const message = chatInput.value.trim();
