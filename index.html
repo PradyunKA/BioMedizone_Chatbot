@@ -1,47 +1,49 @@
-<!-- HTML FILE: index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BioMedizone Chatbot</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>BioMediZone Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">BioMedizone</div>
-        <div class="models-selection">
-            <button>Model 1</button>
-            <button>Model 2</button>
-            <button>Model 3</button>
-        </div>
-        <button>☼</button>
-    </nav>
-
-    <div class="chat-container">
-        <div class="side-panel">
-            <div class="new-chat-button">+ New Chat</div>
-        </div>
-        <div class="chat-content">
-            <h1>BioMedizone CHATBOT</h1>
-            <div class="chat-history">
-                <!-- Chat history messages will appear here -->
-                <div class="chat-message">User: Hello</div>
-                <div class="chat-message">AI: Hi, how can I assist you today?</div>
+    <div class="sidebar">
+        <button class="new-chat-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            New Chat
+        </button>
+    </div>
+    <div class="main-content">
+        <header class="header">
+            <h1 class="title">BioMediZone</h1>
+            <label class="toggle-switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+        </header>
+        <div class="chat-area">
+            <div class="chat-main">
+                <div class="chat-content">
+                    <h2 class="chat-title">BioMediZone<br>CHATBOT</h2>
+                </div>
+                <form class="chat-form" id="chatForm">
+                    <input type="text" class="chat-input" placeholder="Send a message..." required>
+                    <button type="submit" class="send-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13"></path>
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                        </svg>
+                    </button>
+                </form>
             </div>
-            <div class="chat-input">
-                <input type="text" placeholder="Send a message...">
-                <button>➤</button>
+            <div class="right-panel">
+                <p>Generated Links of <strong>Websites</strong> and <strong>Documents</strong> will appear here</p>
             </div>
-        </div>
-        <div class="links-panel">
-            <h3>Generated Links of Websites and Documents will appear here</h3>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
