@@ -75,6 +75,9 @@ def chat():
     if not user_message:
          return jsonify({'error': 'Message is required'}), 400
 
+    if len(user_message) < 1:
+        return jsonify({'error': 'Message is too short.'}), 400
+
     # Get AI response using the placeholder function
     ai_reply = get_ai_response(user_message)
 
