@@ -72,6 +72,9 @@ def chat():
     # Get the user's message from the incoming JSON payload
     user_message = request.json.get('message')
 
+    if not user_message:
+         return jsonify({'error': 'Message is required'}), 400
+
     # Get AI response using the placeholder function
     ai_reply = get_ai_response(user_message)
 
